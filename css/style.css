@@ -48,6 +48,43 @@ main {
       background-color: #26afff;
       border-color: white; }
 
+.show {
+  display: block !important; }
+
+/* LOADING */
+.spinner {
+  position: relative;
+  top: 100px;
+  animation: spin 3s linear infinite;
+  width: 60px;
+  height: 60px;
+  display: none; }
+
+.dot1, .dot2 {
+  animation: pulse 1.5s ease-in-out infinite alternate;
+  border-radius: 50%;
+  background-color: aqua;
+  width: 30px;
+  height: 30px;
+  margin: auto; }
+
+.dot2 {
+  animation-delay: 1.5s; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.25; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 @media (max-width: 768px) {
   main {
     height: 500px;
